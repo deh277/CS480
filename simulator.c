@@ -309,7 +309,7 @@ void logHandling( PCBType *PCBptr, FILE* file, double currentTime, ConfigDataTyp
   PCBType *temp = PCBptr;
   char timestring[20];
   int timeRunner;
-  pthread_t tid = PCBptr->processID;
+  pthread_t tid;
   pthread_attr_t attr;
 
   if( configPtr->logToCode == LOGTO_MONITOR_CODE)
@@ -355,16 +355,15 @@ void logHandling( PCBType *PCBptr, FILE* file, double currentTime, ConfigDataTyp
       }
       else
       {
-        pthread_attr_init(&attr);
-        timeRunner =(temp->metaHeadPtr->intArg2)*(configPtr->ioCycleRate);
-        pthread_create(&tid, &attr, runTimerDev, timestring);
-        pthread_join(tid, NULL);
+        accessTimer(LAP_TIMER,timestring);
         fprintf( file, " %s, Process: %d, %s %sput Operation start \n",timestring, temp->processID, temp->metaHeadPtr->strArg1, temp->metaHeadPtr->inOutArg);
         printf(" %s, Process: %d, %s %sput Operation start \n",timestring, temp->processID, temp->metaHeadPtr->strArg1, temp->metaHeadPtr->inOutArg);
         pthread_attr_init(&attr);
         timeRunner =(temp->metaHeadPtr->intArg2)*(configPtr->ioCycleRate);
-        pthread_create(&tid, &attr, runTimerDev, timestring);
+    
+        pthread_create(&tid, &attr, runTimerDev, &timeRunner);
         pthread_join(tid, NULL);
+        accessTimer(LAP_TIMER,timestring);
         fprintf( file, " %s, Process: %d, %s %sput Operation end \n",timestring, temp->processID, temp->metaHeadPtr->strArg1, temp->metaHeadPtr->inOutArg);
         printf(" %s, Process: %d, %s %sput Operation end \n",timestring, temp->processID, temp->metaHeadPtr->strArg1, temp->metaHeadPtr->inOutArg);
       }
@@ -401,40 +400,14 @@ void logHandling( PCBType *PCBptr, FILE* file, double currentTime, ConfigDataTyp
 
 
 
+
+
 void* runTimerDev( void*  param )
 {
-  struct timeval startTime, endTime;
-  int startSec, startUSec, endSec, endUSec;
-  int uSecDiff, mSecDiff, secDiff, timeDiff;
+  int paramInt = *(int*) param;
+  runTimer(paramInt);
+  return NULL;
+}
 
-  gettimeofday( &startTime, NULL );
-
-  startSec = startTime.tv_sec;
-  startUSec = startTime.tv_usec;
-
-  timeDiff = 0;
-
-  while( timeDiff > 0)
-     {
-      gettimeofday( &endTime, NULL );
-
-      endSec = endTime.tv_sec;
-      endUSec = endTime.tv_usec;
-      uSecDiff = endUSec - startUSec;
-
-      if( uSecDiff < 0 )
-         {
-          uSecDiff = uSecDiff + 1000000;
-
-          endSec = endSec - 1;
-         }
-
-      mSecDiff = uSecDiff / 1000;
-      secDiff = ( endSec - startSec ) * 1000;
-      timeDiff = secDiff + mSecDiff;
-     }
-
-     return param;
- }
 
 

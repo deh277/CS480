@@ -1,0 +1,141 @@
+Simulator Run
+-------------
+
+  0.000000, OS: Simulator Start
+  0.000496, OS: Process 0 set to READY state from NEW state
+  0.000526, OS: Process 1 set to READY state from NEW state
+  0.000554, OS: Process 2 set to READY state from NEW state
+  0.000583, OS: Process 5 set to READY state from NEW state
+  0.000613, OS: Process 4 set to READY state from NEW state
+  0.000613, OS: Process 0 selected with 5880 ms remaining
+  0.000796, OS: Process 0 set from READY to RUNNING
+
+  0.000843, Process: 0, serial input Operation start 
+  0.564124, Process: 0, serial input Operation end 
+  0.564140, Process: 0, video signal output Operation start 
+  1.409535, Process: 0, video signal output Operation end 
+  1.409551, Process: 0, sound signal input Operation start 
+  2.209754, Process: 0, sound signal input Operation end 
+  2.209769, Process: 0, hard drive output Operation start 
+  2.516539, Process: 0, hard drive output Operation end 
+  2.516557, Process: 0, keyboard input Operation start 
+  4.122987, Process: 0, keyboard input Operation end 
+  4.123007, Process: 0, serial input Operation start 
+  4.687596, Process: 0, serial input Operation end 
+  4.687720, Process: 0, cpu process  Operation Start 
+  4.787821, Process: 0, cpu process  Operation end 
+  4.796925, Process: 0, cpu process  Operation Start 
+  4.877347, Process: 0, cpu process  Operation end 
+  4.877362, Process: 0, cpu process  Operation Start 
+  4.939120, Process: 0, cpu process  Operation end 
+  4.939280, Process: 0, video signal output Operation start 
+  5.923761, Process: 0, video signal output Operation end 
+
+  5.923784, OS: Process 0 ended
+  5.923784, OS: Process 0 set to EXIT
+  5.923784, OS: Process 1 selected with 4670 ms remaining
+  5.923786, OS: Process 1 set from READY to RUNNING
+
+  5.923788, Process: 1, serial input Operation start 
+  6.327049, Process: 1, serial input Operation end 
+  6.327064, Process: 1, cpu process  Operation Start 
+  6.387081, Process: 1, cpu process  Operation end 
+  6.387469, Process: 1, cpu process  Operation Start 
+  6.470216, Process: 1, cpu process  Operation end 
+  6.470231, Process: 1, monitor output Operation start 
+  7.871408, Process: 1, monitor output Operation end 
+  7.871487, Process: 1, cpu process  Operation Start 
+  7.931989, Process: 1, cpu process  Operation end 
+  7.932002, Process: 1, cpu process  Operation Start 
+  8.022034, Process: 1, cpu process  Operation end 
+  8.022047, Process: 1, sound signal output Operation start 
+  8.922704, Process: 1, sound signal output Operation end 
+  8.922943, Process: 1, hard drive output Operation start 
+  9.234293, Process: 1, hard drive output Operation end 
+  9.234309, Process: 1, video signal input Operation start 
+ 10.218269, Process: 1, video signal input Operation end 
+ 10.218284, Process: 1, serial output Operation start 
+ 10.619569, Process: 1, serial output Operation end 
+
+ 10.619589, OS: Process 1 ended
+ 10.619589, OS: Process 1 set to EXIT
+ 10.619589, OS: Process 2 selected with 5530 ms remaining
+ 10.619593, OS: Process 2 set from READY to RUNNING
+
+ 10.619595, Process: 2, hard drive input Operation start 
+ 10.979965, Process: 2, hard drive input Operation end 
+ 10.979980, Process: 2, video signal output Operation start 
+ 11.963321, Process: 2, video signal output Operation end 
+ 11.963342, Process: 2, usb output Operation start 
+ 12.244192, Process: 2, usb output Operation end 
+ 12.244207, Process: 2, monitor output Operation start 
+ 13.644593, Process: 2, monitor output Operation end 
+ 13.644608, Process: 2, cpu process  Operation Start 
+ 13.718496, Process: 2, cpu process  Operation end 
+ 13.718511, Process: 2, cpu process  Operation Start 
+ 13.808513, Process: 2, cpu process  Operation end 
+ 13.808539, Process: 2, keyboard input Operation start 
+ 15.211365, Process: 2, keyboard input Operation end 
+ 15.211535, Process: 2, video signal input Operation start 
+ 16.052490, Process: 2, video signal input Operation end 
+ 16.052508, Process: 2, cpu process  Operation Start 
+ 16.108501, Process: 2, cpu process  Operation end 
+ 16.108518, Process: 2, cpu process  Operation Start 
+ 16.170170, Process: 2, cpu process  Operation end 
+
+ 16.170273, OS: Process 2 ended
+ 16.170273, OS: Process 2 set to EXIT
+ 16.170273, OS: Process 5 selected with 0 ms remaining
+ 16.170275, OS: Process 5 set from READY to RUNNING
+
+ 16.170277, Process: 5, hard drive input Operation start 
+ 16.601732, Process: 5, hard drive input Operation end 
+ 16.601746, Process: 5, sound signal output Operation start 
+ 17.205053, Process: 5, sound signal output Operation end 
+ 17.207412, Process: 5, cpu process  Operation Start 
+ 17.277663, Process: 5, cpu process  Operation end 
+ 17.277979, Process: 5, keyboard input Operation start 
+ 18.879781, Process: 5, keyboard input Operation end 
+ 18.879798, Process: 5, hard drive input Operation start 
+ 19.481491, Process: 5, hard drive input Operation end 
+ 19.481516, Process: 5, video signal output Operation start 
+ 20.742415, Process: 5, video signal output Operation end 
+ 20.742432, Process: 5, serial input Operation start 
+ 21.313913, Process: 5, serial input Operation end 
+ 21.313931, Process: 5, sound signal output Operation start 
+ 21.818405, Process: 5, sound signal output Operation end 
+ 21.818420, Process: 5, cpu process  Operation Start 
+ 21.908423, Process: 5, cpu process  Operation end 
+ 21.908439, Process: 5, sound signal output Operation start 
+ 22.811469, Process: 5, sound signal output Operation end 
+
+ 22.811490, OS: Process 5 ended
+ 22.811490, OS: Process 5 set to EXIT
+ 22.811490, OS: Process 4 selected with 3060 ms remaining
+ 22.811493, OS: Process 4 set from READY to RUNNING
+
+ 22.811496, Process: 4, serial input Operation start 
+ 23.294193, Process: 4, serial input Operation end 
+ 23.294206, Process: 4, video signal output Operation start 
+ 24.135225, Process: 4, video signal output Operation end 
+ 24.135240, Process: 4, cpu process  Operation Start 
+ 24.186148, Process: 4, cpu process  Operation end 
+ 24.186163, Process: 4, usb input Operation start 
+ 24.396663, Process: 4, usb input Operation end 
+ 24.396805, Process: 4, cpu process  Operation Start 
+ 24.483651, Process: 4, cpu process  Operation end 
+ 24.483669, Process: 4, cpu process  Operation Start 
+ 24.575309, Process: 4, cpu process  Operation end 
+ 24.575410, Process: 4, cpu process  Operation Start 
+ 24.637440, Process: 4, cpu process  Operation end 
+ 24.637459, Process: 4, hard drive output Operation start 
+ 25.002419, Process: 4, hard drive output Operation end 
+ 25.002436, Process: 4, hard drive output Operation start 
+ 25.487407, Process: 4, hard drive output Operation end 
+ 25.487428, Process: 4, hard drive output Operation start 
+ 25.907533, Process: 4, hard drive output Operation end 
+
+ 25.907563, OS: Process 4 ended
+ 25.907563, OS: Process 4 set to EXIT
+ 25.907563, OS: System stop
+ 25.907566, OS: Simulation End

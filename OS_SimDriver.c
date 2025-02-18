@@ -179,18 +179,3 @@ void showCommandLineFormat()
 
 
 
-
-
-
-
-/*
-
-void runSim( ConfigDataType *configPtr, OpCodeType *metaDataMstrPtr )
-{
-
-
-}
-
-*/
-
-

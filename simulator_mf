@@ -1,23 +1,28 @@
 CC = gcc
-DEBUG = -g
-CFLAGS = -Wall -std=c99 -pedantic -c $(DEBUG)
-LFLAGS = -Wall -std=c99 -pedantic $(DEBUG)
+DEBUGS = -g
+CFLAGS = -Wall -std=c99 -pedantic -c $(DEBUGS)
+LFLAGS = -Wall -std=c99 -pedantic $(DEBUGS)
 
-Simulator : OS_SimDriver.o  metadataops.o configops.o StringUtils.o
-	$(CC) $(LFLAGS) OS_SimDriver.o  metadataops.o configops.o StringUtils.o -o sim01
-    
-OS_SimDriver.o : OS_SimDriver.c
+Simulator: OS_SimDriver.o simulator.o metadataops.o configops.o StringUtils.o simtimer.o
+	$(CC) $(LFLAGS) OS_SimDriver.o simulator.o metadataops.o configops.o StringUtils.o simtimer.o -o Sim01
+
+OS_SimDriver.o: OS_SimDriver.c OS_SimDriver.h
 	$(CC) $(CFLAGS) OS_SimDriver.c
-    
-    
-metadataops.o : metadataops.c metadataops.h
+
+simulator.o: simulator.c simulator.h
+	$(CC) $(CFLAGS) simulator.c
+
+metadataops.o: metadataops.c metadataops.h
 	$(CC) $(CFLAGS) metadataops.c
-    
-configops.o : configops.c configops.h
+
+configops.o: configops.c configops.h
 	$(CC) $(CFLAGS) configops.c
-    
-Utilities.o : StringUtils.c StringUtils.h
-	$(CC) $(CFLAGS) Utilities.c
-    
+
+StringUtils.o: StringUtils.c StringUtils.h
+	$(CC) $(CFLAGS) StringUtils.c
+
+simtimer.o: simtimer.c simtimer.h
+	$(CC) $(CFLAGS) simtimer.c
+
 clean:
-	\rm *.o sim01
+	\rm -f *.o Sim01
